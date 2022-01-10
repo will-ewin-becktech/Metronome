@@ -10,9 +10,21 @@ namespace Metronome
     /// </summary>
     public partial class PolymeterMetronome : UserControl
     {
+        /// <summary>
+        /// base-beat frequency
+        /// </summary>
         private const int LOW_FREQ = 1000;
+        /// <summary>
+        /// how long are the beeps?
+        /// </summary>
         private const int DURATION = 10;
+        /// <summary>
+        /// list of active beepers
+        /// </summary>
         private List<TimedBeeper> _beepers;
+        /// <summary>
+        /// semaphore for UI
+        /// </summary>
         private volatile bool _isRunning = false;
 
         public PolymeterMetronome()
