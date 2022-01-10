@@ -1,0 +1,19 @@
+﻿<Window x:Class="Metronome.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Metronome"
+        mc:Ignorable="d"
+        Title="Metronome" Height="150" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Standard">
+                <local:StandardMetronome x:Name="ucStandard"/>
+            </TabItem>
+            <TabItem Header="Polymeter">
+                <local:PolymeterMetronome x:Name="ucPolymeter"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Metronome.PolymeterMetronome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Metronome"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Content="Enter seconds per measure:"/>
+        <TextBox VerticalContentAlignment="Center" Grid.Column="6" Grid.Row="0" Name="txtSPM" TextAlignment="Center" Text="4"/>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Content="1" Name="chk1" IsChecked="True"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Content="2" Name="chk2"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Content="3" Name="chk3"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3">
+            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Content="4" Name="chk4"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="4">
+            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Content="6" Name="chk6"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="5">
+            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Content="8" Name="chk8"/>
+        </Grid>
+        <Button Grid.ColumnSpan="6" Grid.Row="2" Name="btnClick" Content="START" Click="btnClick_Click" IsDefault="True"/>
+    </Grid>
+</UserControl>
